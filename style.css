@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#7db7df;color:#fff;font-family:Arial,Helvetica,sans-serif}
+#game{display:block;width:100%;height:100%;outline:none}
+#hud{position:fixed;z-index:3;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;pointer-events:none}
+.panel{background:rgba(3,17,32,.78);border:1px solid rgba(117,220,255,.55);border-radius:12px;padding:12px 15px;line-height:1.6;font-size:14px;box-shadow:0 5px 24px #071b3155}
+.panel strong{font-size:18px;color:#9ee8ff}
+.objective{font-size:16px;font-weight:bold;text-align:center}
+.controls{font-size:12px;line-height:1.55}
+.controls b{font-size:15px;color:#9ee8ff}
+.bar{height:8px;width:180px;background:#4a2830;border-radius:8px;overflow:hidden;margin:3px 0 6px}
+#healthbar{height:100%;width:100%;background:linear-gradient(90deg,#19d66b,#b6ff6d);transition:width .15s}
+#centerMessage{position:fixed;z-index:5;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(#071c2b88,#061321bb);transition:opacity .3s}
+#centerMessage.hidden{opacity:0;pointer-events:none}
+#centerMessage h1{font-size:clamp(32px,6vw,72px);margin:0;text-shadow:0 5px 20px #000;color:#fff;letter-spacing:2px}
+#centerMessage p{font-size:20px;margin:10px 0 25px}
+button{cursor:pointer;border:0;border-radius:10px;background:linear-gradient(135deg,#00b7ff,#0876d8);color:white;font-size:18px;font-weight:bold;padding:15px 28px;box-shadow:0 6px 20px #001b3c88}
+button:hover{filter:brightness(1.15)}
+#centerMessage small{margin-top:18px;color:#d2e7f6}
+#crosshair{position:fixed;z-index:2;display:none;left:50%;top:50%;transform:translate(-50%,-50%);font-size:34px;color:#ff4c4c;text-shadow:0 0 7px #000;pointer-events:none}
+#toast{position:fixed;z-index:4;bottom:25px;left:50%;transform:translateX(-50%);padding:10px 18px;background:#071a2ddd;border-radius:10px;font-weight:bold;display:none}
+@media(max-width:800px){#hud{flex-direction:column}.controls{display:none}.objective{display:none}.panel{font-size:12px;padding:8px 10px}.bar{width:130px}}

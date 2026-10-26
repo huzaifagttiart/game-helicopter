@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Helicopter Battle 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hud">
+  <div class="panel">
+    <strong>🚁 HELICOPTER BATTLE</strong>
+    <div>Health: <span id="health">100</span>%</div>
+    <div class="bar"><div id="healthbar"></div></div>
+    <div>Level: <span id="level">1</span> | Enemies: <span id="enemyCount">0</span></div>
+    <div>Bullets: <span id="bullets">∞</span> | Missiles: <span id="missiles">8</span></div>
+  </div>
+  <div class="panel objective" id="objective">Mission: Destroy all enemies</div>
+  <div class="panel controls">
+    <b>CONTROLS</b><br>
+    W/S: Forward / Back<br>
+    A/D: Strafe left / right<br>
+    ← / →: Turn helicopter<br>
+    Q / E: 360° rotation<br>
+    Mouse: Aim · Left click: Fire<br>
+    Space: Missile · R: Restart
+  </div>
+</div>
+<div id="centerMessage">
+  <h1>HELICOPTER BATTLE</h1>
+  <p>3D combat training mission</p>
+  <button id="startBtn">START MISSION</button>
+  <small>Desktop recommended · Click inside the game to aim</small>
+</div>
+<div id="crosshair">+</div>
+<div id="toast"></div>
+<canvas id="game"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
